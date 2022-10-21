@@ -1,6 +1,7 @@
-<script>
+<script lang="ts">
 
-import Reponses from "./Reponses.svelte";
+import Quiz from "./Quiz.svelte";
+import swal from "sweetalert";
 
 </script>
 
@@ -10,6 +11,6 @@ import Reponses from "./Reponses.svelte";
 
 <div class="container-xxl bg-light" id="App">
 
-    <Reponses></Reponses>
+    <Quiz></Quiz>
 
 </div>
