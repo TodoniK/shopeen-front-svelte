@@ -1,6 +1,6 @@
 <script lang="ts">
 
-import Quiz from "./Quiz.svelte";
+import Quiz from "./components/Quiz.svelte";
 import swal from "sweetalert";
 
 </script>

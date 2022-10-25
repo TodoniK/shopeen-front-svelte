@@ -1,8 +1,8 @@
 <script lang="ts">
     import Mesure from "./Mesure.svelte";
-    import { storeTabReponses, storeBilanEnergy, storeBilanCO2, storeBilanEco } from './store.js'
-    import {Bilan} from "./models/Bilan";
-    import {TAB_REFERENTIELS} from "./referentiel/listeReferentiels";
+    import { storeTabReponses, storeBilanEnergy, storeBilanCO2, storeBilanEco } from '../store.js'
+    import {Bilan} from "../models/Bilan";
+    import {TAB_REFERENTIELS} from "../referentiel/listeReferentiels";
 
     let tabReponses: any;
     let bilan = new Bilan();
@@ -11,14 +11,7 @@
         tabReponses = value;
     });
 
-    function majQt(){
-        bilan.calculerBilans(TAB_REFERENTIELS,tabReponses)
-        storeBilanEco.set(bilan.bilanEco)
-        storeBilanEnergy.set(bilan.bilanEnergy)
-        storeBilanCO2.set(bilan.bilanCO2)
-    }
-
-$: tabReponses && majQt()
+$: tabReponses && bilan.calculerBilans(TAB_REFERENTIELS,tabReponses)
 
 </script>
 

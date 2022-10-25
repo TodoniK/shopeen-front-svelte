@@ -1,4 +1,5 @@
-import type {Referentiel} from "./Referentiel";
+import type {ReferentielMesure} from "./ReferentielMesure";
+import {storeBilanCO2, storeBilanEco, storeBilanEnergy} from "../store";
 
 export class Bilan {
     bilanCO2: number = 0;
@@ -8,48 +9,66 @@ export class Bilan {
     constructor() {
     }
 
-    private calculerBilanEco(tabReferentiel: Array<Referentiel>, tabReponses){
+    private calculerBilanEco(tabReferentiel: Array<ReferentielMesure>, tabReponses){
+
+        let sommeEco = 0;
+
         for(let j = 0; j < tabReponses.length; j++)
         {
             for(let i = 0; i < tabReferentiel.length; i++)
             {
                 if(tabReferentiel[i].id == tabReponses[j].id)
                 {
-                    this.bilanEco = this.bilanEco+tabReponses[j].reponse*tabReferentiel[i].euro
+                    sommeEco = sommeEco+tabReponses[j].reponse*tabReferentiel[i].euro
                 }
             }
         }
+
+        this.bilanEco = sommeEco;
     }
 
-    private calculerBilanCO2(tabReferentiel: Array<Referentiel>, tabReponses){
+    private calculerBilanCO2(tabReferentiel: Array<ReferentielMesure>, tabReponses){
+
+        let sommeTabCO2 = 0;
+
         for(let j = 0; j < tabReponses.length; j++)
         {
             for(let i = 0; i < tabReferentiel.length; i++)
             {
                 if(tabReferentiel[i].id == tabReponses[j].id)
                 {
-                    this.bilanCO2 = this.bilanCO2+tabReponses[j].reponse*tabReferentiel[i].kgeqCO2
+                    sommeTabCO2 = sommeTabCO2+tabReponses[j].reponse*tabReferentiel[i].kgeqCO2
                 }
             }
         }
+
+        this.bilanCO2 = sommeTabCO2;
     }
 
-    private calculerBilanEnergy(tabReferentiel: Array<Referentiel>, tabReponses){
+    private calculerBilanEnergy(tabReferentiel: Array<ReferentielMesure>, tabReponses){
+
+        let sommeEnergy = 0;
+
         for(let j = 0; j < tabReponses.length; j++)
         {
             for(let i = 0; i < tabReferentiel.length; i++)
             {
                 if(tabReferentiel[i].id == tabReponses[j].id)
                 {
-                    this.bilanEnergy = this.bilanEnergy+tabReponses[j].reponse*tabReferentiel[i].kwH
+                    sommeEnergy = sommeEnergy+tabReponses[j].reponse*tabReferentiel[i].kwH
                 }
             }
         }
+
+        this.bilanEnergy = sommeEnergy;
     }
 
-    calculerBilans(tabReferentiel: Array<Referentiel>, tabReponses){
+    calculerBilans(tabReferentiel: Array<ReferentielMesure>, tabReponses){
         this.calculerBilanCO2(tabReferentiel, tabReponses)
         this.calculerBilanEco(tabReferentiel, tabReponses)
         this.calculerBilanEnergy(tabReferentiel, tabReponses)
+        storeBilanEco.set(this.bilanEco)
+        storeBilanEnergy.set(this.bilanEnergy)
+        storeBilanCO2.set(this.bilanCO2)
     }
 }

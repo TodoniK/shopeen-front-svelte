@@ -1,5 +1,5 @@
-import type {Referentiel} from "../models/Referentiel";
-export const TAB_REFERENTIELS: Array<Referentiel> = [
+import type {ReferentielMesure} from "../models/ReferentielMesure";
+export const TAB_REFERENTIELS: Array<ReferentielMesure> = [
     {
         id: 'nbMoniteurs',
         kgeqCO2: 15,

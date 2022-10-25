@@ -1,6 +1,6 @@
 <script lang="ts">
 
-    import { storeQuizIndex } from './store.js'
+    import { storeQuizIndex } from '../store.js'
 
     let localIndexQuiz: number;
 
