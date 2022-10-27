@@ -16,10 +16,10 @@ storeQuizIndex.subscribe(value => {
 
 </style>
 
-<div id ="questions" class="container pb-2 pt-2">
-    <h1 id="question">
+<div id ="questions" class="container pb-1 pt-2">
+    <h3 id="question">
         {question.getQuestionActuelle(TAB_QUIZ,localIndexQuiz)}
-    </h1>
+    </h3>
 </div>
 
 

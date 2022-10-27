@@ -1,7 +1,10 @@
 <script lang="ts">
 
 import Quiz from "./components/Quiz.svelte";
-import swal from "sweetalert";
+import '../node_modules/@ob1/web/dist/css/style.css'
+import '../node_modules/@ob1/web/dist/css/orange-icons.css'
+import '../node_modules/@ob1/web/dist/css/sosh-icons.css'
+import '../node_modules/@ob1/web/dist/js/ob1'
 
 </script>
 
@@ -9,7 +12,7 @@ import swal from "sweetalert";
 
 </style>
 
-<div class="container-xxl bg-light" id="App">
+<div class="col-12 bg-gray2" id="App">
 
     <Quiz></Quiz>
 

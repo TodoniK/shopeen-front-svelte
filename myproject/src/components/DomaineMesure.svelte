@@ -24,7 +24,7 @@
 <div id ="section" class="container">
     <div class="row">
         <div class="col-md-12">
-            <h1>Etape {$storeEtapeCourante}/3 - {$storeNomSection}</h1>
+            <h3>Etape {$storeEtapeCourante}/3 - {$storeNomSection}</h3>
         </div>
     </div>
 </div>

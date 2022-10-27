@@ -4,6 +4,7 @@
     import {Question} from "../models/Question"
     import {Reponse} from "../models/Reponse";
     import {get} from "svelte/store";
+    import {TAB_QUIZ} from "../referentiel/listeInfosQuiz";
 
     let localIndexQuiz: number;
     let localTabReponses: any;
@@ -27,6 +28,15 @@
         {
             document.getElementById("btn_second").style.display = "block";
         }
+
+        if(localIndexQuiz == 5)
+        {
+            document.getElementById("btn_suivant").textContent = "Terminer";
+        }
+        else
+        {
+            document.getElementById("btn_suivant").textContent = "Suivant";
+        }
     }
 
     function questionPrec(){
@@ -37,7 +47,7 @@
     }
 
     function questionSuiv(){
-        if(get(storeQuizIndex) < 5)
+        if(get(storeQuizIndex) < TAB_QUIZ.length)
         {
             storeQuizIndex.update(n => n+1)
         }
@@ -57,7 +67,15 @@
 
         if(reponse.checkBeforeSubmit(idQuestion,inputValue) == 0)
         {
-            questionSuiv()
+            if(localIndexQuiz == 5)
+            {
+                document.getElementById("questionnaire").style.display = "none"
+                document.getElementById("graphe-bilan").style.display = "block"
+            }
+            else
+            {
+                questionSuiv()
+            }
         }
     }
 
@@ -67,6 +85,7 @@
 <style>
 
 </style>
-
-<button id="btn_second" class="btn btn-secondary me-md-2" type="button" style="display: none" on:click={questionPrec} on:click={verifBoutons} on:click="{getValueHistory}">Précédent</button>
-<button id="btn_suivant" class="btn btn-primary" type="button" on:click={sendToResponse} on:click={verifBoutons} on:click="{getValueHistory}">Suivant</button>
+<div class="row px-1">
+    <button id="btn_second" class="btn btn-secondary mx-2" type="button" style="display: none" on:click={questionPrec} on:click={verifBoutons} on:click="{getValueHistory}">Précédent</button>
+    <button id="btn_suivant" class="btn btn-primary" type="button" on:click={sendToResponse} on:click={verifBoutons} on:click="{getValueHistory}">Suivant</button>
+</div>

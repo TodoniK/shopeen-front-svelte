@@ -12,8 +12,6 @@ export class Reponse{
         const input = document.getElementById('input') as HTMLInputElement
 
         let tabReponses: Array<any>= get(storeTabReponses)
-        console.log(tabReponses)
-        console.log(idQuestion)
 
         for(let i = 0; i <= tabReponses.length; i++)
         {
@@ -78,17 +76,21 @@ export class Reponse{
             if(inputValue >= 0 && inputValue <= 999)
             {
                 this.remplirTableauReponses(inputValue, idQuestion);
+                document.getElementById("input").classList.remove("is-invalid")
+                document.getElementById("input-alert").style.display = "none"
 
                 returnValue = 0
             }
             else
             {
-                swal("Erreur", "Veuillez saisir un nombre compris entre 0 et 999 !", "error");
+                document.getElementById("input").classList.add("is-invalid")
+                document.getElementById("input-alert").style.display = "block"
             }
         }
         else
         {
-            swal("Erreur", "Veuillez saisir une valeur !", "error");
+            document.getElementById("input").classList.add("is-invalid")
+            document.getElementById("input-alert").style.display = "block"
         }
 
         return returnValue
