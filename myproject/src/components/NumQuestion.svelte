@@ -1,13 +1,6 @@
 <script lang="ts">
-
-    import { storeQuizIndex } from '../store.js'
-
-    let localIndexQuiz: number;
-
-    storeQuizIndex.subscribe(value => {
-        localIndexQuiz = value;
-    });
-
+import { storeQuizIndex } from '../store.js'
+import {TAB_QUIZ} from "../referentiel/listeInfosQuiz";
 </script>
 
 <style>
@@ -15,5 +8,5 @@
 </style>
 
 <div id="etape" class="col-md-6" align="right">
-    {localIndexQuiz}/5
+    {$storeQuizIndex}/{TAB_QUIZ.length-1}
 </div>

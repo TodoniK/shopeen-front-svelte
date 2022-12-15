@@ -1,5 +1,4 @@
 import type {ReferentielMesure} from "./ReferentielMesure";
-import {storeBilanCO2, storeBilanEco, storeBilanEnergy} from "../store.js";
 
 export class Bilan {
     bilanCO2: number = 0;
@@ -68,8 +67,6 @@ export class Bilan {
         this.calculerBilanCO2(tabReferentiel, tabReponses)
         this.calculerBilanEco(tabReferentiel, tabReponses)
         this.calculerBilanEnergy(tabReferentiel, tabReponses)
-        storeBilanCO2.set(this.bilanCO2)
-        storeBilanEco.set(this.bilanEco)
-        storeBilanEnergy.set(this.bilanEnergy)
+
     }
 }

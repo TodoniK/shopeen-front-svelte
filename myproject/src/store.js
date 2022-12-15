@@ -1,14 +1,13 @@
 import {get, writable} from 'svelte/store';
 import {TAB_QUIZ} from "./referentiel/listeInfosQuiz";
-
-export const storeTabReponses = writable([]);
+import {Bilan} from "./models/Bilan";
+import {Question} from "./models/Question";
+import {DomaineMesure} from "./models/DomaineMesure";
+import {Reponse} from "./models/Reponse";
 
 export const storeQuizIndex = writable(0);
-
-export const storeEtapeCourante = writable(TAB_QUIZ[get(storeQuizIndex)].etape);
-
-export const storeNomSection = writable(TAB_QUIZ[get(storeQuizIndex)].section);
-
-export const storeBilanCO2 = writable(0);
-export const storeBilanEnergy = writable(0);
-export const storeBilanEco = writable(0);
+export const storeBilan = writable(new Bilan())
+export const storeQuestion = writable(new Question())
+export const storeDomaineMesure = writable(new DomaineMesure())
+export const storeReponse = writable(new Reponse())
+export const storeCurrentInput = writable('')

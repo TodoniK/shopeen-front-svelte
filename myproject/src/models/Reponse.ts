@@ -1,30 +1,33 @@
-import {storeTabReponses} from "../store";
-import swal from "sweetalert";
+import { storeQuizIndex, storeQuestion, storeCurrentInput } from "../store";
 import {get} from "svelte/store";
+import {TAB_QUIZ} from "../referentiel/listeInfosQuiz";
 
 export class Reponse{
+
+    tabReponses: Array<any> = [];
 
     constructor() {
     }
 
+    getStoreReponse()
+    {
+        return this.tabReponses;
+    }
+
     remplirInput(idQuestion){
 
-        const input = document.getElementById('input') as HTMLInputElement
-
-        let tabReponses: Array<any>= get(storeTabReponses)
-
-        for(let i = 0; i <= tabReponses.length; i++)
+        for(let i = 0; i <= this.tabReponses.length; i++)
         {
-            if(typeof tabReponses[i] != 'undefined')
+            if(typeof this.tabReponses[i] != 'undefined')
             {
-                if(tabReponses[i].id == idQuestion)
+                if(this.tabReponses[i].id == idQuestion)
                 {
-                    input.value = tabReponses[i].reponse;
+                    storeCurrentInput.set(this.tabReponses[i].reponse)
                     break;
                 }
                 else
                 {
-                    input.value = ''
+                    storeCurrentInput.set('')
                 }
             }
         }
@@ -34,11 +37,9 @@ export class Reponse{
 
         let resultat = -1;
 
-        let tabReponses: Array<any>= get(storeTabReponses)
-
-        for(let i =0; i < tabReponses.length; i++)
+        for(let i =0; i < this.tabReponses.length; i++)
         {
-            if(tabReponses[i].id == idQuestion)
+            if(this.tabReponses[i].id == idQuestion)
             {
                 resultat = i;
                 break;
@@ -50,7 +51,7 @@ export class Reponse{
 
     remplirTableauReponses(reponse, idQuestion){
 
-        let nvTableauReponses: Array<any> = get(storeTabReponses);
+        let nvTableauReponses: Array<any> = this.tabReponses;
 
         if(this.chercherIndex(idQuestion) != -1)
         {
@@ -64,7 +65,7 @@ export class Reponse{
             })
         }
 
-        storeTabReponses.set(nvTableauReponses);
+        this.tabReponses = nvTableauReponses;
     }
 
     checkBeforeSubmit(idQuestion,inputValue)
@@ -76,23 +77,49 @@ export class Reponse{
             if(inputValue >= 0 && inputValue <= 999)
             {
                 this.remplirTableauReponses(inputValue, idQuestion);
-                document.getElementById("input").classList.remove("is-invalid")
-                document.getElementById("input-alert").style.display = "none"
 
                 returnValue = 0
             }
-            else
-            {
-                document.getElementById("input").classList.add("is-invalid")
-                document.getElementById("input-alert").style.display = "block"
-            }
-        }
-        else
-        {
-            document.getElementById("input").classList.add("is-invalid")
-            document.getElementById("input-alert").style.display = "block"
         }
 
         return returnValue
     }
+
+    questionPrec(){
+        if(get(storeQuizIndex) > 0)
+        {
+            storeQuizIndex.update(n => n-1)
+        }
+    }
+
+    questionSuiv(){
+        if(get(storeQuizIndex) < TAB_QUIZ.length)
+        {
+            storeQuizIndex.update(n => n+1)
+        }
+    }
+
+    getValueHistory()
+    {
+        let duplicateObjectQuestion: storeQuestion = get(storeQuestion)
+        // @ts-ignore
+        let idQuestion = duplicateObjectQuestion.getIdFromQuestion(TAB_QUIZ[get(storeQuizIndex)].question)
+        this.remplirInput(idQuestion)
+    }
+
+    sendToResponse(){
+
+        let duplicateObjectQuestion: storeQuestion = get(storeQuestion)
+        // @ts-ignore
+        let idQuestion = duplicateObjectQuestion.getIdFromQuestion(TAB_QUIZ[get(storeQuizIndex)].question)
+
+        if(this.checkBeforeSubmit(idQuestion,get(storeCurrentInput)) == 0)
+        {
+            if(get(storeQuizIndex) != TAB_QUIZ.length)
+            {
+                this.questionSuiv()
+            }
+        }
+    }
+
 }

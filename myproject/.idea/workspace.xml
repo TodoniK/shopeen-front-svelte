@@ -23,20 +23,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/DSFV4380/Documents/ALTERNANCE/Projet_Shopeen/dev/projet_svelte/myproject/src/tests&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\DSFV4380\\Documents\\ALTERNANCE\\Projet_Shopeen\\dev\\projet_svelte\\myproject\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/DSFV4380/Documents/ALTERNANCE/Projet_Shopeen/dev/projet_vue",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "C:\\Users\\DSFV4380\\Documents\\ALTERNANCE\\Projet_Shopeen\\dev\\projet_svelte\\myproject\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\DSFV4380\Documents\ALTERNANCE\Projet_Shopeen\dev\projet_svelte\myproject\src\tests" />
@@ -56,6 +56,7 @@
       <workItem from="1666770842188" duration="17120000" />
       <workItem from="1666853283951" duration="607000" />
       <workItem from="1666854977205" duration="17500000" />
+      <workItem from="1666882258623" duration="16000" />
     </task>
     <servers />
   </component>

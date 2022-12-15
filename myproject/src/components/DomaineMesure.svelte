@@ -1,30 +1,25 @@
 <script lang="ts">
 
-    import { storeEtapeCourante, storeNomSection, storeQuizIndex } from '../store.js'
+    import { storeDomaineMesure, storeQuizIndex, storeBilan } from '../store.js'
     import {TAB_QUIZ} from "../referentiel/listeInfosQuiz";
-    import {DomaineMesure} from "../models/DomaineMesure";
-    import {get} from "svelte/store";
 
-    let domaineMesure = new DomaineMesure();
+    let etape = $storeDomaineMesure.etape
+    let section = $storeDomaineMesure.section
 
-    let index;
+    function majAffichage()
+    {
+        $storeDomaineMesure.majEtapeEtSection(TAB_QUIZ, $storeQuizIndex)
+        etape = $storeDomaineMesure.getEtape()
+        section = $storeDomaineMesure.getSection()
+    }
 
-    storeQuizIndex.subscribe(value => {
-        index = value;
-    });
-
-    $: index && domaineMesure.majEtapeEtSection(TAB_QUIZ, get(storeQuizIndex))
-
+    $: $storeQuizIndex && majAffichage()
 </script>
-
-<style>
-
-</style>
 
 <div id ="section" class="container">
     <div class="row">
         <div class="col-md-12">
-            <h3>Etape {$storeEtapeCourante}/3 - {$storeNomSection}</h3>
+            <h3>Etape {etape}/{TAB_QUIZ[TAB_QUIZ.length-1].etape} - {section}</h3>
         </div>
     </div>
 </div>

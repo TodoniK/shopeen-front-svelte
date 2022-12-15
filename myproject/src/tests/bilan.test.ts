@@ -2,6 +2,7 @@ import {Bilan} from "../models/Bilan";
 import {TAB_REFERENTIELS} from "../referentiel/listeReferentiels";
 
 const unBilan = new Bilan();
+describe("Tests bilan", () => {
 
 // Test sur l'attribut CO2 de la classe Bilan
 it('Un si contenant 15 pages web devrait consommer 225keqCO2', () => {
@@ -55,4 +56,5 @@ it('Un si contenant 3 pc de dev devrait consommer 6€, 21kwH et 45kqeqCO2', () 
     expect(unBilan.bilanEnergy).toBe(21);
     expect(unBilan.bilanEco).toBe(6);
     expect(unBilan.bilanCO2).toBe(45);
-});
+});}
+)

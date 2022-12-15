@@ -1,6 +1,6 @@
 <script>
     import { Bar } from 'svelte-chartjs';
-    import {storeBilanCO2, storeBilanEco, storeBilanEnergy} from "../store";
+    import {storeBilan, storeQuizIndex} from "../store";
 
     import {
         Chart,
@@ -21,20 +21,18 @@
         LinearScale
     );
 
-    let bilanCO2;
-    let data;
+    let data
+    let bilanCO2 = $storeBilan.bilanCO2
+    let bilanEco = $storeBilan.bilanEco
+    let bilanEnergy = $storeBilan.bilanEnergy
 
-    storeBilanCO2.subscribe(value => {
-        bilanCO2 = value;
-    });
-
-    function majDonnees(){
+    function majAffichage(){
         data = {
             labels: ['Consommation totale'],
             datasets: [
                 {
                     label: 'Consommation énergétique',
-                    data: [$storeBilanEnergy],
+                    data: [bilanEnergy],
                     backgroundColor: [
                         'rgba(255, 134,159,0.4)',
                     ],
@@ -45,7 +43,7 @@
                 },
                 {
                     label: 'Consommation carbonique',
-                    data: [$storeBilanCO2],
+                    data: [bilanCO2],
                     backgroundColor: [
                         'rgba(98,  182, 239,0.4)',
                     ],
@@ -56,7 +54,7 @@
                 },
                 {
                     label: 'Consommation économique',
-                    data: [$storeBilanEco],
+                    data: [bilanEco],
                     backgroundColor: [
                         'rgba(255, 218, 128,0.4)',
                     ],
@@ -69,7 +67,18 @@
         };
     }
 
-    $: bilanCO2 && majDonnees()
+    function majDonnees(){
+        bilanCO2 = $storeBilan.bilanCO2
+        bilanEco = $storeBilan.bilanEco
+        bilanEnergy = $storeBilan.bilanEnergy
+    }
+
+    function majGraph(){
+        majDonnees()
+        majAffichage()
+    }
+
+    $: $storeQuizIndex && majGraph()
 
 </script>
 

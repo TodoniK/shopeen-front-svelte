@@ -1,24 +1,11 @@
 <script lang="ts">
-import { storeQuizIndex } from '../store.js'
-import {Question} from "../models/Question";
+import { storeQuizIndex, storeQuestion } from '../store.js'
 import {TAB_QUIZ} from "../referentiel/listeInfosQuiz";
-
-let localIndexQuiz: number;
-let question = new Question();
-
-storeQuizIndex.subscribe(value => {
-    localIndexQuiz = value;
-});
-
 </script>
-
-<style>
-
-</style>
 
 <div id ="questions" class="container pb-1 pt-2">
     <h3 id="question">
-        {question.getQuestionActuelle(TAB_QUIZ,localIndexQuiz)}
+        {$storeQuestion.getQuestionActuelle(TAB_QUIZ, $storeQuizIndex)}
     </h3>
 </div>
 
