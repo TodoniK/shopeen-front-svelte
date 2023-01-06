@@ -1,19 +1,12 @@
-import type {ReferentielQuestion} from "./ReferentielQuestion";
-import {TAB_QUIZ} from "../referentiel/listeInfosQuiz";
+import type {ReferentielQuestion} from "../referentiel/ReferentielQuestion";
+import {TAB_QUIZ} from "../referentiel/QuestionList";
 
 export class DomaineMesure {
+
     etape: number = TAB_QUIZ[0].etape;
     section: string = TAB_QUIZ[0].section;
 
     constructor() {
-    }
-
-    getEtape(){
-        return this.etape;
-    }
-
-    getSection(){
-        return this.section;
     }
 
     private majEtape(quiz: Array<ReferentielQuestion>, index){

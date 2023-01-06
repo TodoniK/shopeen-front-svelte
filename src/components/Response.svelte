@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { storeCurrentInput } from '../store.js'
+    import { storeCurrentInput } from '../store'
 </script>
 
 <div id="reponse" class="container">
@@ -8,7 +8,7 @@
             <input type="text" id="input" data-ob1-component="FormControlEmpty" class="form-control" aria-labelledby="label12 invalid-feedback12" aria-describedby="helper12" aria-invalid="true" bind:value={$storeCurrentInput}>
             <label id="label12" class="form-control-placeholder" for="input">Insérer votre valeur</label>
 
-            {#if $storeCurrentInput != ''}
+            {#if $storeCurrentInput !== ''}
                 {#if Number($storeCurrentInput) < 0 || Number($storeCurrentInput) > 999}
                     <div id="input-alert" class="alert-container alert-container-sm alert-danger invalid-feedback" style="display: block">
                         <p class="alert">

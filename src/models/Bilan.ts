@@ -1,72 +1,24 @@
-import type {ReferentielMesure} from "./ReferentielMesure";
+import {BilanRequest} from "../API/BilanRequest";
+
+export interface BilanResponse {bilanEuro : string, bilanKwh : string, bilanKgeqCO2 : string}
 
 export class Bilan {
-    bilanCO2: number = 0;
-    bilanEnergy: number = 0;
-    bilanEco: number = 0;
 
-    constructor() {
-    }
+    bilanEuro: number = 0;
+    bilanKwh: number = 0;
+    bilanKgeqCO2: number = 0;
 
-    private calculerBilanEco(tabReferentiel: Array<ReferentielMesure>, tabReponses){
+    constructor(){}
 
-        let sommeEco = 0;
-
-        for(let j = 0; j < tabReponses.length; j++)
-        {
-            for(let i = 0; i < tabReferentiel.length; i++)
-            {
-                if(tabReferentiel[i].id == tabReponses[j].id)
-                {
-                    sommeEco = sommeEco+tabReponses[j].reponse*tabReferentiel[i].euro
-                }
-            }
-        }
-
-        this.bilanEco = sommeEco;
-    }
-
-    private calculerBilanCO2(tabReferentiel: Array<ReferentielMesure>, tabReponses){
-
-        let sommeTabCO2 = 0;
-
-        for(let j = 0; j < tabReponses.length; j++)
-        {
-            for(let i = 0; i < tabReferentiel.length; i++)
-            {
-                if(tabReferentiel[i].id == tabReponses[j].id)
-                {
-                    sommeTabCO2 = sommeTabCO2+tabReponses[j].reponse*tabReferentiel[i].kgeqCO2
-                }
-            }
-        }
-
-        this.bilanCO2 = sommeTabCO2;
-    }
-
-    private calculerBilanEnergy(tabReferentiel: Array<ReferentielMesure>, tabReponses){
-
-        let sommeEnergy = 0;
-
-        for(let j = 0; j < tabReponses.length; j++)
-        {
-            for(let i = 0; i < tabReferentiel.length; i++)
-            {
-                if(tabReferentiel[i].id == tabReponses[j].id)
-                {
-                    sommeEnergy = sommeEnergy+tabReponses[j].reponse*tabReferentiel[i].kwH
-                }
-            }
-        }
-
-        this.bilanEnergy = sommeEnergy;
-    }
-
-    calculerBilans(tabReferentiel: Array<ReferentielMesure>, tabReponses){
-
-        this.calculerBilanCO2(tabReferentiel, tabReponses)
-        this.calculerBilanEco(tabReferentiel, tabReponses)
-        this.calculerBilanEnergy(tabReferentiel, tabReponses)
-
+    majValeurs(){
+        BilanRequest.getBilan().then(r => {
+            // @ts-ignore
+            this.bilanEuro = Math.round(r.bilanEuro);console.log(r.bilanEuro)
+            // @ts-ignore
+            this.bilanKwh = Math.round(r.bilanKwh);console.log(r.bilanKwh)
+            // @ts-ignore
+            this.bilanKgeqCO2 = Math.round(r.bilanKgeqCO2);console.log(r.bilanKgeqCO2)
+        })
+        console.log(this.bilanKgeqCO2,this.bilanKwh,this.bilanEuro)
     }
 }

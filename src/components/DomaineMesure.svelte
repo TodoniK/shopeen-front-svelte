@@ -1,7 +1,7 @@
 <script lang="ts">
 
-    import { storeDomaineMesure, storeQuizIndex, storeBilan } from '../store.js'
-    import {TAB_QUIZ} from "../referentiel/listeInfosQuiz";
+    import { storeDomaineMesure, storeQuizIndex } from '../store'
+    import {TAB_QUIZ} from "../referentiel/QuestionList";
 
     let etape = $storeDomaineMesure.etape
     let section = $storeDomaineMesure.section
@@ -9,8 +9,8 @@
     function majAffichage()
     {
         $storeDomaineMesure.majEtapeEtSection(TAB_QUIZ, $storeQuizIndex)
-        etape = $storeDomaineMesure.getEtape()
-        section = $storeDomaineMesure.getSection()
+        etape = $storeDomaineMesure.etape
+        section = $storeDomaineMesure.section
     }
 
     $: $storeQuizIndex && majAffichage()

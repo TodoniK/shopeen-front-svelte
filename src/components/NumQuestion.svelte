@@ -1,12 +1,14 @@
 <script lang="ts">
-import { storeQuizIndex } from '../store.js'
-import {TAB_QUIZ} from "../referentiel/listeInfosQuiz";
+import { storeQuizIndex } from '../store'
+import {TAB_QUIZ} from "../referentiel/QuestionList";
 </script>
 
 <style>
-
+#etape{
+    text-align:right;
+}
 </style>
 
-<div id="etape" class="col-md-6" align="right">
+<div id="etape" class="col-md-6">
     {$storeQuizIndex}/{TAB_QUIZ.length-1}
 </div>

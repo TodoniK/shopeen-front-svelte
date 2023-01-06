@@ -22,9 +22,9 @@
     );
 
     let data
-    let bilanCO2 = $storeBilan.bilanCO2
-    let bilanEco = $storeBilan.bilanEco
-    let bilanEnergy = $storeBilan.bilanEnergy
+    let bilanCO2 = $storeBilan.bilanKgeqCO2
+    let bilanEco = $storeBilan.bilanEuro
+    let bilanEnergy = $storeBilan.bilanKwh
 
     function majAffichage(){
         data = {
@@ -68,9 +68,9 @@
     }
 
     function majDonnees(){
-        bilanCO2 = $storeBilan.bilanCO2
-        bilanEco = $storeBilan.bilanEco
-        bilanEnergy = $storeBilan.bilanEnergy
+        bilanCO2 = $storeBilan.bilanKgeqCO2
+        bilanEco = $storeBilan.bilanEuro
+        bilanEnergy = $storeBilan.bilanKwh
     }
 
     function majGraph(){

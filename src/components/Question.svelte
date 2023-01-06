@@ -1,6 +1,6 @@
 <script lang="ts">
-import { storeQuizIndex, storeQuestion } from '../store.js'
-import {TAB_QUIZ} from "../referentiel/listeInfosQuiz";
+import { storeQuizIndex, storeQuestion } from '../store'
+import {TAB_QUIZ} from "../referentiel/QuestionList";
 </script>
 
 <div id ="questions" class="container pb-1 pt-2">
@@ -8,5 +8,3 @@ import {TAB_QUIZ} from "../referentiel/listeInfosQuiz";
         {$storeQuestion.getQuestionActuelle(TAB_QUIZ, $storeQuizIndex)}
     </h3>
 </div>
-
-

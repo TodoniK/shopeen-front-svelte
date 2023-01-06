@@ -1,4 +1,4 @@
-import type {ReferentielQuestion} from "../models/ReferentielQuestion";
+import type {ReferentielQuestion} from "./ReferentielQuestion";
 export const TAB_QUIZ: Array<ReferentielQuestion> = [
     {
         id: 'nbServeurs',

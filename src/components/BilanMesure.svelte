@@ -1,21 +1,22 @@
 <script lang="ts">
-    import { storeBilan, storeReponse, storeQuizIndex } from '../store.js'
+    import {storeBilan, storeQuizIndex} from '../store'
     import Mesure from "./Mesure.svelte";
-    import {TAB_REFERENTIELS} from "../referentiel/listeReferentiels";
 
-    let bilanEnergy = $storeBilan.bilanEnergy
-    let bilanCO2 = $storeBilan.bilanCO2
-    let bilanEco = $storeBilan.bilanEco
+    let bilanEnergy = $storeBilan.bilanKwh
+    let bilanCO2 = $storeBilan.bilanKgeqCO2
+    let bilanEco = $storeBilan.bilanEuro
 
-    function majBilanEtAffichage()
+    function majAffichage()
     {
-        $storeBilan.calculerBilans(TAB_REFERENTIELS, $storeReponse.getStoreReponse())
-        bilanEnergy = $storeBilan.bilanEnergy
-        bilanCO2 = $storeBilan.bilanCO2
-        bilanEco = $storeBilan.bilanEco
+        $storeBilan.majValeurs()
+        console.log("maj bilan")
+        bilanEnergy = $storeBilan.bilanKwh
+        bilanCO2 = $storeBilan.bilanKgeqCO2
+        bilanEco = $storeBilan.bilanEuro
+        console.log(bilanEco,bilanEnergy,bilanCO2)
     }
 
-    $: $storeQuizIndex && majBilanEtAffichage()
+    $: $storeQuizIndex && majAffichage()
 </script>
 
 <div id="mesures" class="row pb-5 px-2" style="align-items: center">
