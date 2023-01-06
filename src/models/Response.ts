@@ -38,7 +38,6 @@ export class Response {
     }
 
     fillInput(){
-
         if(this.firstEntry == false) {
             // @ts-ignore
             let idQuestion:string = get(storeQuestion).getIdFromQuestion(TAB_QUIZ[get(storeQuizIndex)].question);

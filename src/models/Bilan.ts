@@ -10,15 +10,14 @@ export class Bilan {
 
     constructor(){}
 
-    majValeurs(){
-        BilanRequest.getBilan().then(r => {
+    async majValeurs(){
+        await BilanRequest.getBilan().then(r => {
             // @ts-ignore
-            this.bilanEuro = Math.round(r.bilanEuro);console.log(r.bilanEuro)
+            this.bilanEuro = Math.round(r.bilanEuro);
             // @ts-ignore
-            this.bilanKwh = Math.round(r.bilanKwh);console.log(r.bilanKwh)
+            this.bilanKwh = Math.round(r.bilanKwh);
             // @ts-ignore
-            this.bilanKgeqCO2 = Math.round(r.bilanKgeqCO2);console.log(r.bilanKgeqCO2)
+            this.bilanKgeqCO2 = Math.round(r.bilanKgeqCO2);
         })
-        console.log(this.bilanKgeqCO2,this.bilanKwh,this.bilanEuro)
     }
 }

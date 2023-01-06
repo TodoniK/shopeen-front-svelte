@@ -6,14 +6,12 @@
     let bilanCO2 = $storeBilan.bilanKgeqCO2
     let bilanEco = $storeBilan.bilanEuro
 
-    function majAffichage()
+    async function majAffichage()
     {
-        $storeBilan.majValeurs()
-        console.log("maj bilan")
+        await $storeBilan.majValeurs()
         bilanEnergy = $storeBilan.bilanKwh
         bilanCO2 = $storeBilan.bilanKgeqCO2
         bilanEco = $storeBilan.bilanEuro
-        console.log(bilanEco,bilanEnergy,bilanCO2)
     }
 
     $: $storeQuizIndex && majAffichage()

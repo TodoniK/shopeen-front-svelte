@@ -2,30 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="86df740d-cdbf-49a5-a498-edc32480696e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/models/Response.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/myproject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/myproject.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/API/API.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/API/API.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/BilanMesure.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BilanMesure.svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Bouton.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Bouton.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/DomaineMesure.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DomaineMesure.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/GraphBilan.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GraphBilan.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/NumQuestion.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NumQuestion.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Question.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Question.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Quiz.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Quiz.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Reponse.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Response.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Bilan.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/DomaineMesure.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/DomaineMesure.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Question.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Question.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/ReferentielMesure.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/ReferentielQuestion.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/referentiel/ReferentielQuestion.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/ReferentielReponse.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Reponse.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/referentiel/listeInfosQuiz.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/referentiel/QuestionList.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/referentiel/listeReferentiels.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/bilan.test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Bilan.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Bilan.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Response.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Response.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +39,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/DSFV4380/Documents/ALTERNANCE/Escape_Game/ares-admin",
+    "last_opened_file_path": "C:/Users/DSFV4380/Documents/ALTERNANCE/Projet_Shopeen/dev/shopeen-cal-back-micro-mongo",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -103,6 +85,8 @@
       <workItem from="1672926534807" duration="4953000" />
       <workItem from="1672992860617" duration="6921000" />
       <workItem from="1673009006787" duration="5434000" />
+      <workItem from="1673015370731" duration="2772000" />
+      <workItem from="1673019513309" duration="2901000" />
     </task>
     <servers />
   </component>
