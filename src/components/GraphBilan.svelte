@@ -1,6 +1,6 @@
 <script>
     import { Bar } from 'svelte-chartjs';
-    import {storeBilan, storeQuizIndex} from "../store";
+    import {storeBilan, storeNomApp, storeQuizIndex} from "../store";
 
     import {
         Chart,
@@ -31,7 +31,7 @@
             labels: ['Consommation totale'],
             datasets: [
                 {
-                    label: 'Consommation énergétique',
+                    label: 'Energie consommée',
                     data: [bilanEnergy],
                     backgroundColor: [
                         'rgba(255, 134,159,0.4)',
@@ -42,7 +42,7 @@
                     ],
                 },
                 {
-                    label: 'Consommation carbonique',
+                    label: 'CO2 produit',
                     data: [bilanCO2],
                     backgroundColor: [
                         'rgba(98,  182, 239,0.4)',
@@ -53,7 +53,7 @@
                     ],
                 },
                 {
-                    label: 'Consommation économique',
+                    label: 'Coût financier',
                     data: [bilanEco],
                     backgroundColor: [
                         'rgba(255, 218, 128,0.4)',
@@ -90,6 +90,6 @@
       },
       title: {
         display: true,
-        text: 'Consommation de MyShop en trois données'
+        text: 'Consommation annuelle de'+$storeNomApp
       }
     } }} />

@@ -3,4 +3,5 @@ export interface ReferentielQuestion {
     question: string;
     section: string;
     etape: number;
+    consoMoy: number
 }

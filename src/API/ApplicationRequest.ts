@@ -17,7 +17,7 @@ export class ApplicationRequest {
     static postApplicationBilan(appName: string, bilanEnergy:number, bilanEuro:number, bilanCO2:number){
         API.post(
             "/appli",
-            {"appName": appName,
+            {"idExtName": appName,
                 "bilanEuro": bilanEuro,
                 "bilanCO2": bilanCO2,
                 "bilanEnergy": bilanEnergy,})

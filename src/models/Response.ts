@@ -29,9 +29,11 @@ export class Response {
         // @ts-ignore
         let userResponse:number = get(storeCurrentInput)
 
+        let consoMoy:number = TAB_QUIZ[get(storeQuizIndex)].consoMoy
+
         if (this.checkBeforeSubmit(userResponse) == true) {
             if (get(storeQuizIndex) != TAB_QUIZ.length) {
-                ResponseRequest.postReponse(idQuestion,userResponse)
+                ResponseRequest.postResponse(idQuestion,userResponse,consoMoy)
                 this.questionSuiv()
             }
         }

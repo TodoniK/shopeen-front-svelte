@@ -25,11 +25,12 @@ export class ResponseRequest {
             });
     }
 
-    static postReponse(idQuestion: string, userResponse: number){
+    static postResponse(idQuestion: string, userResponse: number, consoMoy: number){
         API.post(
             "/responses",
             {"idQuestion": idQuestion,
-                "userResponse": userResponse})
+                "userResponse": userResponse,
+                "consoMoy": consoMoy})
             .then((response) => {
                     return response.data;
                 }
