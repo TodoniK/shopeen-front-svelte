@@ -3,13 +3,14 @@
     import {storeNomApp} from "../store";
 
     let appSelected;
+    export let texteSelecteur;
 
     function fillAppName(){
         $storeNomApp = TAB_APP[appSelected]
     }
 </script>
 
-<h3>Veuillez choisir l'application dont vous souhaitez faire le bilan :</h3>
+<h3>{texteSelecteur}</h3>
 
 <form>
     <div class="form-group">

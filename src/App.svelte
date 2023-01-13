@@ -4,7 +4,7 @@ import '../node_modules/@ob1/web/dist/css/style.css'
 import '../node_modules/@ob1/web/dist/css/orange-icons.css'
 import '../node_modules/@ob1/web/dist/css/sosh-icons.css'
 import '../node_modules/@ob1/web/dist/js/ob1'
-import Homepage from "./components/Homepage.svelte";
+import Homepage from "./components/HomepageSwitcher.svelte";
 
 </script>
 

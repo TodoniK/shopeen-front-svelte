@@ -14,6 +14,17 @@ export class ApplicationRequest {
             });
     }
 
+    static getApplicationHistoricByName(appName: string): Promise<Array<ReferentielApp> | string> {
+        return API.get("/appli/"+appName)
+            .then((response) => {
+                    return response.data;
+                }
+            )
+            .catch(error => {
+                return error.message
+            });
+    }
+
     static postApplicationBilan(appName: string, bilanEnergy:number, bilanEuro:number, bilanCO2:number){
         API.post(
             "/appli",

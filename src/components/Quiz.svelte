@@ -12,14 +12,14 @@ import ListeApp from "./ListeApp.svelte";
 import Titre from "./Titre.svelte";
 </script>
 
-<Titre></Titre>
+<Titre titre="Mon questionnaire"></Titre>
 
 <div id="quiz" class="pb-1 pt-3">
     <BilanMesure></BilanMesure>
 
     {#if $storeNomApp === ''}
         <div id="app-selection" class="shadow-lg p-3 mb-3 bg-light rounded mx-2" style="display: block">
-            <ListeApp></ListeApp>
+            <ListeApp texteSelecteur="Veuillez séléctionner l'application dont vous souhaitez faire le bilan :"></ListeApp>
         </div>
     {/if}
 
