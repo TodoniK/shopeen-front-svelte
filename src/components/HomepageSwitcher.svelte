@@ -1,6 +1,6 @@
 <script lang="ts">
 import Quiz from "./Quiz.svelte";
-import NewAppHistoricalGraph from "./NewAppHistoricalGraph.svelte";
+import AppHistoricalGraph from "./AppHistoricalGraph.svelte";
 
 let isQuizDisplayed = true
 let isGraphDisplayed = false
@@ -33,7 +33,7 @@ function displayGraph(){
     {/if}
 
     {#if isGraphDisplayed}
-        <NewAppHistoricalGraph></NewAppHistoricalGraph>
+        <AppHistoricalGraph></AppHistoricalGraph>
     {/if}
 
 </div>
