@@ -30,6 +30,7 @@
     "typescript": "^4.0.0"
   },
   "dependencies": {
+    "@fusioncharts/powercharts": "^3.19.0",
     "@ob1/web": "~1.16.5",
     "@types/jest": "^29.2.0",
     "axios": "^1.2.2",

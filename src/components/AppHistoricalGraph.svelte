@@ -26,8 +26,6 @@
     const getChartConfig = () => {
         const fusionDataStore = new FusionCharts.DataStore(),
         fusionTable = fusionDataStore.createDataTable(tab, schema);
-        console.log("chart config")
-        console.log(tab)
 
         return {
             type: "timeseries",
