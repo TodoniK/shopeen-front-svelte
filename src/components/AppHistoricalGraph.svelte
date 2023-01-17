@@ -35,7 +35,6 @@
         const fusionDataStore = new FusionCharts.DataStore();
         const fusionTable = fusionDataStore.createDataTable(tab, schema);
 
-
         const dataSource = {
             "chart": {
                 "multicanvas": false

@@ -36,6 +36,7 @@
     "axios": "^1.2.2",
     "chart.js": "^3.9.1",
     "fusioncharts": "^3.19.0",
+    "rollup-plugin-url": "^3.0.1",
     "sirv-cli": "^2.0.0",
     "svelte-chartjs": "^3.0.1",
     "svelte-fusioncharts": "^1.0.0",
