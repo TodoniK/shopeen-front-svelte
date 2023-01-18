@@ -20,10 +20,10 @@ function displayGraph(){
     <nav class="ob1-menu-page ob1-menu-page-fullscreen ob1-menu-page-icon">
         <ul class="nav o-nav-light">
             <li class="nav-item">
-                <a href={'#'} class="nav-link" on:click={displayQuiz}><span class="item-icon icon-add-contract" aria-hidden="true"></span>Entrer une mesure</a>
+                <a href={'#'} class="nav-link" on:click={displayQuiz}><i class="bi bi-node-plus-fill" style="font-size: 25px;"></i><br>Entrer une mesure</a>
             </li>
             <li class="nav-item">
-                <a href={'#'} class="nav-link" on:click={displayGraph}><span class="item-icon icon-graph-column-chart" aria-hidden="true"></span>Observer les mesures</a>
+                <a href={'#'} class="nav-link" on:click={displayGraph}><i class="bi bi-bar-chart-line" style="font-size: 25px;"></i><br>Observer les mesures</a>
             </li>
         </ul>
     </nav>
