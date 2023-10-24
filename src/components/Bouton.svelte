@@ -1,5 +1,5 @@
 <script lang="ts">
-    import {storeQuizIndex, storeReponse} from '../store'
+    import {storeQuizIndex, storeReponse} from '../store/store'
 </script>
 
 <div class="row px-1">

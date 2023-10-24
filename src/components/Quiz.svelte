@@ -5,7 +5,7 @@ import BilanMesure from "./BilanMesure.svelte";
 import DomaineMesure from "./DomaineMesure.svelte";
 import Navigation from "./Navigation.svelte";
 import GraphBilan from "./GraphBilan.svelte";
-import {storeNomApp, storeQuizIndex} from '../store'
+import {storeNomApp, storeQuizIndex} from '../store/store'
 import {TAB_QUIZ} from "../referentiel/QuestionList";
 import Progression from "./Progression.svelte";
 import ListeApp from "./ListeApp.svelte";

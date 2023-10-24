@@ -1,8 +1,8 @@
 import {writable} from 'svelte/store';
-import {Question} from "./models/Question";
-import {DomaineMesure} from "./models/DomaineMesure";
-import {Response} from "./models/Response";
-import {Bilan} from "./models/Bilan";
+import {Question} from "../models/Question";
+import {DomaineMesure} from "../models/DomaineMesure";
+import {Response} from "../models/Response";
+import {Bilan} from "../models/Bilan";
 
 export const storeQuizIndex = writable(0);
 export const storeQuestion = writable(new Question())

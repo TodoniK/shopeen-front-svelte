@@ -9,15 +9,15 @@ export class DomaineMesure {
     constructor() {
     }
 
-    private majEtape(quiz: Array<ReferentielQuestion>, index){
+    private majEtape(quiz: Array<ReferentielQuestion>, index: any){
         this.etape = quiz[index].etape;
     }
 
-    private majSection(quiz: Array<ReferentielQuestion>, index){
+    private majSection(quiz: Array<ReferentielQuestion>, index: any){
         this.section = quiz[index].section;
     }
 
-    majEtapeEtSection(quiz: Array<ReferentielQuestion>, index){
+    majEtapeEtSection(quiz: Array<ReferentielQuestion>, index: any){
         this.majEtape(quiz,index);
         this.majSection(quiz,index);
     }

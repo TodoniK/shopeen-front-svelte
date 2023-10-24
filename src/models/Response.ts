@@ -1,4 +1,4 @@
-import {storeCurrentInput, storeQuestion, storeQuizIndex} from "../store";
+import {storeCurrentInput, storeQuestion, storeQuizIndex} from "../store/store";
 import {get} from "svelte/store";
 import {TAB_QUIZ} from "../referentiel/QuestionList";
 import {ResponseRequest} from "../API/ResponseRequest";

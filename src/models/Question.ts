@@ -12,7 +12,7 @@ export class Question {
         return this.texte;
     }
 
-    getIdFromQuestion(question){
+    getIdFromQuestion(question: any){
         let i = 0;
         let id = null;
 

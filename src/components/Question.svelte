@@ -1,5 +1,5 @@
 <script lang="ts">
-import { storeQuizIndex, storeQuestion } from '../store'
+import { storeQuizIndex, storeQuestion } from '../store/store'
 import {TAB_QUIZ} from "../referentiel/QuestionList";
 </script>
 

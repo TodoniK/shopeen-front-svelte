@@ -1,6 +1,6 @@
 <script lang="ts">
 
-    import { storeDomaineMesure, storeQuizIndex } from '../store'
+    import { storeDomaineMesure, storeQuizIndex } from '../store/store'
     import {TAB_QUIZ} from "../referentiel/QuestionList";
     import ListeApp from "./ListeApp.svelte";
 

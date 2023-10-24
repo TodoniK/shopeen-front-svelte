@@ -1,6 +1,6 @@
 <script lang="ts">
 
-    import {storeBilan, storeNomApp, storeQuizIndex} from "../store";
+    import {storeBilan, storeNomApp, storeQuizIndex} from "../store/store";
     import {ApplicationRequest} from "../API/ApplicationRequest";
     import {TAB_QUIZ} from "../referentiel/QuestionList";
 

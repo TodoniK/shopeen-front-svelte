@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { storeCurrentInput } from '../store'
+    import { storeCurrentInput } from '../store/store'
 </script>
 
 <div id="reponse" class="container">

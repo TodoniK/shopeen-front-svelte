@@ -1,6 +1,6 @@
 <script>
     import { Bar } from 'svelte-chartjs';
-    import {storeBilan, storeNomApp, storeQuizIndex} from "../store";
+    import {storeBilan, storeNomApp, storeQuizIndex} from "../store/store";
 
     import {
         Chart,

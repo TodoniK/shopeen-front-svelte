@@ -1,5 +1,5 @@
 <script lang="ts">
-    import {storeBilan, storeQuizIndex} from '../store'
+    import {storeBilan, storeQuizIndex} from '../store/store'
     import Mesure from "./Mesure.svelte";
 
     let bilanEnergy = $storeBilan.bilanKwh

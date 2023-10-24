@@ -3,7 +3,7 @@
     import Timeseries from 'fusioncharts/fusioncharts.timeseries';
     import SvelteFC, {fcRoot} from 'svelte-fusioncharts';
     import Titre from "./Titre.svelte";
-    import {storeNomApp} from "../store";
+    import {storeNomApp} from "../store/store";
     import ListeApp from "./ListeApp.svelte";
     import {ApplicationRequest} from "../API/ApplicationRequest";
 
@@ -86,7 +86,7 @@
         return {
             type: 'timeseries',
             width: '100%',
-            height: 1500,
+            height: 450,
             renderAt: 'chart-container',
             dataSource,
         };

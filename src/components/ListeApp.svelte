@@ -1,6 +1,6 @@
 <script lang="ts">
     import {TAB_APP} from "../referentiel/ApplicationList";
-    import {storeNomApp} from "../store";
+    import {storeNomApp} from "../store/store";
 
     let appSelected;
     export let texteSelecteur;
