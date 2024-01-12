@@ -1,7 +1,7 @@
 <script lang="ts">
 
     import {storeBilan, storeNomApp, storeQuizIndex} from "../store/store";
-    import {ApplicationRequest} from "../API/ApplicationRequest";
+    import {ApplicationRequest} from "../api/ApplicationRequest";
     import {TAB_QUIZ} from "../referentiel/QuestionList";
 
     function sendAppHistoric()

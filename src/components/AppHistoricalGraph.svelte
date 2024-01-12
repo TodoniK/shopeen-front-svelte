@@ -5,7 +5,7 @@
     import Titre from "./Titre.svelte";
     import {storeNomApp} from "../store/store";
     import ListeApp from "./ListeApp.svelte";
-    import {ApplicationRequest} from "../API/ApplicationRequest";
+    import {ApplicationRequest} from "../api/ApplicationRequest";
 
     fcRoot(FusionCharts, Timeseries);
 
