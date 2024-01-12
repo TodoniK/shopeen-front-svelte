@@ -1,4 +1,4 @@
-import API from "./API";
+import API from "./shopeen-api";
 import type {ReferentielApp} from "../referentiel/ReferentielApp";
 
 export class ApplicationRequest {

@@ -1,4 +1,4 @@
-import API from "./API";
+import API from "./shopeen-api";
 import type {BilanResponse} from "../models/Bilan";
 
 export class BilanRequest {

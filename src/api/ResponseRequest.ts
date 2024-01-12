@@ -1,4 +1,4 @@
-import API from "./API";
+import API from "./shopeen-api";
 import type {DataResponse} from "../models/Response";
 
 export class ResponseRequest {
